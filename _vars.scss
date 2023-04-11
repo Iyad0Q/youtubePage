@@ -1,0 +1,20 @@
+%spanStyle {
+    span {
+        font-size: 35px;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 50%;
+
+        &:hover {background-color: rgb(230, 230, 230);}
+
+        // make it fill color
+        &:active {
+            font-variation-settings:
+            'FILL' 1,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 48
+        }
+    }
+}
+

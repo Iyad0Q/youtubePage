@@ -1,0 +1,32 @@
+@import "vars";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    // text-align: center;
+    // float: left;
+    // margin-top: 10px;
+     
+    .user-section {
+        @extend %spanStyle;
+    }
+
+    .search-section {
+        // max-width: 500px;
+        position: absolute;
+        transform: translateX(-50%);
+        left: 50%;
+        top: 2%;
+
+        input {
+            height: 40px;
+            width: 400px;
+            border-radius: 75px;
+            border: 2px solid silver; 
+        }
+    }
+}
