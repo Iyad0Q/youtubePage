@@ -1,14 +1,18 @@
-header .user-section span {
+header .menu-section span, header .user-section span {
   font-size: 35px;
   cursor: pointer;
   padding: 10px;
   border-radius: 50%;
 }
-header .user-section span:hover {
-  background-color: rgb(230, 230, 230);
+header .menu-section span:hover, header .user-section span:hover {
+  background-color: #ededed;
 }
-header .user-section span:active {
+header .menu-section span:active, header .user-section span:active {
   font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+header .search-section #search, header .search-section input {
+  border: 1.5px solid #d3d3d3;
 }
 
 * {
@@ -17,15 +21,44 @@ header .user-section span:active {
   box-sizing: border-box;
 }
 
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
 header .search-section {
-  position: absolute;
-  transform: translateX(-50%);
-  left: 50%;
-  top: 2%;
+  display: inline-flex;
 }
 header .search-section input {
+  width: 500px;
   height: 40px;
-  width: 400px;
-  border-radius: 75px;
-  border: 2px solid silver;
+  border-radius: 10px 75px 75px 10px;
+}
+header .search-section #search {
+  width: 70px;
+  height: 40px;
+  background-color: #f4f4f4;
+  border-radius: 75px 10px 10px 75px;
+  cursor: pointer;
+}
+header .search-section #search:hover {
+  background-color: #ededed;
+}
+header .search-section #mic {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+}
+header .search-section #mic:hover {
+  background-color: #ededed;
+}
+header .menu-section img {
+  height: 56px;
+}
+header .menu-section span {
+  font-size: 30px;
+  float: right;
 }/*# sourceMappingURL=style.css.map */

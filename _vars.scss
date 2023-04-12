@@ -1,3 +1,5 @@
+$main-color: #d3d3d3;
+
 %spanStyle {
     span {
         font-size: 35px;
@@ -5,9 +7,9 @@
         padding: 10px;
         border-radius: 50%;
 
-        &:hover {background-color: rgb(230, 230, 230);}
+        &:hover {background-color: lighten($main-color, 10%);}
 
-        // make it fill color
+        // make it with fill color
         &:active {
             font-variation-settings:
             'FILL' 1,
@@ -18,3 +20,6 @@
     }
 }
 
+%searchSection-border {
+    border: 1.5px solid $main-color;
+}
