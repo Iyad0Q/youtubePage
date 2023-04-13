@@ -58,12 +58,57 @@ header {
     .menu-section {
         @extend %spanStyle;
         img {
-            // margin: 10px;
             height: 56px;
         }
         span {
             font-size: 30px;
             float: right;
         }
+    }
+}
+
+
+main {
+    .navBar-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        nav {
+            position: fixed;
+            top: 50px;
+            right: 0;
+            width: 200px;
+            height: 500px;
+            background-color: white;
+            padding: 15px;
+            transition: all 0.4s ease-in-out;
+            transform: translateX(0);
+            
+            &.active {transform: translateX(200px);}
+
+            li {
+                border-radius: 10px;
+                padding: 5px;
+                list-style: none;
+                cursor: pointer;
+                
+                &:hover {
+                    background-color: lighten($main-color, 10%);
+
+                    font-variation-settings:
+                    'FILL' 1,
+                    'wght' 400,
+                    'GRAD' 0,
+                    'opsz' 48
+                }
+
+            }
+        }
+    }
+
+    .videos-container {
+        height: 500px;
+        // background-color: silver;
     }
 }
