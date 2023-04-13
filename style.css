@@ -15,10 +15,22 @@ header .search-section #search, header .search-section input {
   border: 1.5px solid #d3d3d3;
 }
 
+body.dark {
+  background-color: #333;
+}
+
+body {
+  color: black;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: white;
 }
 
 header {
@@ -57,10 +69,19 @@ header .search-section #mic:hover {
 }
 header .menu-section img {
   height: 56px;
+  background-color: white;
+  border-radius: 10px;
 }
 header .menu-section span {
   font-size: 30px;
   float: right;
+}
+header .menu-section #menu {
+  transition: all 0.5 ease-in-out;
+}
+header .menu-section #menu.active {
+  position: absolute;
+  transform: translateX(-150px);
 }
 
 main .navBar-section {
@@ -70,17 +91,17 @@ main .navBar-section {
 }
 main .navBar-section nav {
   position: fixed;
-  top: 50px;
+  top: 0;
   right: 0;
   width: 200px;
   height: 500px;
   background-color: white;
   padding: 15px;
   transition: all 0.4s ease-in-out;
-  transform: translateX(0);
+  transform: translateX(200px);
 }
 main .navBar-section nav.active {
-  transform: translateX(200px);
+  transform: translateX(0);
 }
 main .navBar-section nav li {
   border-radius: 10px;
@@ -92,6 +113,13 @@ main .navBar-section nav li:hover {
   background-color: #ededed;
   font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
 }
-main .videos-container {
-  height: 500px;
+
+footer {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+}
+footer span {
+  cursor: pointer;
+  font-size: 50px;
 }/*# sourceMappingURL=style.css.map */

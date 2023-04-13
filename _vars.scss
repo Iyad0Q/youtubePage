@@ -1,5 +1,9 @@
-$main-color: #d3d3d3;
+// vriables
+$hover-color: #d3d3d3;
+$main-color: white;
 
+
+// extends
 %spanStyle {
     span {
         font-size: 35px;
@@ -7,7 +11,7 @@ $main-color: #d3d3d3;
         padding: 10px;
         border-radius: 50%;
 
-        &:hover {background-color: lighten($main-color, 10%);}
+        &:hover {background-color: lighten($hover-color, 10%);}
 
         // make it with fill color
         &:active {
@@ -21,5 +25,27 @@ $main-color: #d3d3d3;
 }
 
 %searchSection-border {
-    border: 1.5px solid $main-color;
+    border: 1.5px solid $hover-color;
+}
+
+
+
+// color function
+@function color($color) {
+    @if (lightness($color) > 75%) {
+        @return black;
+    }
+    @else {
+        @return white;
+    }
+}
+
+
+body.dark {
+    $main-color: #333;
+    background-color: $main-color;
+}
+
+body {
+    color: color($main-color);
 }

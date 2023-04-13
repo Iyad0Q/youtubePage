@@ -6,8 +6,12 @@
     box-sizing: border-box;
 }
 
-header {
+body {
+    background-color: $main-color;
+}
 
+
+header {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -30,11 +34,11 @@ header {
         #search {
             width: 70px;
             height: 40px;
-            background-color: lighten($main-color, 13%);
+            background-color: lighten($hover-color, 13%);
             border-radius: 75px 10px 10px 75px;
             @extend %searchSection-border;
             cursor: pointer;
-            &:hover {background-color: lighten($main-color, 10%);}
+            &:hover {background-color: lighten($hover-color, 10%);}
         }
 
         #mic {
@@ -49,7 +53,7 @@ header {
             padding: 10px;
             border-radius: 50%;
     
-            &:hover {background-color: lighten($main-color, 10%);}
+            &:hover {background-color: lighten($hover-color, 10%);}
     
         }
 
@@ -59,11 +63,23 @@ header {
         @extend %spanStyle;
         img {
             height: 56px;
+            background-color: white;
+            border-radius: 10px;
         }
         span {
             font-size: 30px;
             float: right;
         }
+
+        #menu {
+            transition: all 0.5 ease-in-out;
+
+            &.active{
+                position: absolute;
+                transform: translateX(-150px);
+            }
+        }
+
     }
 }
 
@@ -76,16 +92,16 @@ main {
 
         nav {
             position: fixed;
-            top: 50px;
+            top: 0;
             right: 0;
             width: 200px;
             height: 500px;
-            background-color: white;
+            background-color: $main-color;
             padding: 15px;
             transition: all 0.4s ease-in-out;
-            transform: translateX(0);
+            transform: translateX(200px);
             
-            &.active {transform: translateX(200px);}
+            &.active {transform: translateX(0);}
 
             li {
                 border-radius: 10px;
@@ -94,7 +110,7 @@ main {
                 cursor: pointer;
                 
                 &:hover {
-                    background-color: lighten($main-color, 10%);
+                    background-color: lighten($hover-color, 10%);
 
                     font-variation-settings:
                     'FILL' 1,
@@ -107,8 +123,17 @@ main {
         }
     }
 
-    .videos-container {
-        height: 500px;
-        // background-color: silver;
+}
+
+
+
+footer {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+
+    span {
+        cursor: pointer;
+        font-size: 50px;
     }
 }
