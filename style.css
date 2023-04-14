@@ -15,8 +15,14 @@ header .search-section #search, header .search-section input {
   border: 1.5px solid #d3d3d3;
 }
 
-body.dark {
-  background-color: #333;
+main .videos-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(100%);
+  z-index: -10;
 }
 
 body {
@@ -53,6 +59,7 @@ header .search-section #search {
   background-color: #f4f4f4;
   border-radius: 75px 10px 10px 75px;
   cursor: pointer;
+  transition: all 0.5 ease-in-out;
 }
 header .search-section #search:hover {
   background-color: #ededed;
@@ -69,8 +76,6 @@ header .search-section #mic:hover {
 }
 header .menu-section img {
   height: 56px;
-  background-color: white;
-  border-radius: 10px;
 }
 header .menu-section span {
   font-size: 30px;
@@ -78,10 +83,12 @@ header .menu-section span {
 }
 header .menu-section #menu {
   transition: all 0.5 ease-in-out;
+  z-index: 1;
 }
 header .menu-section #menu.active {
   position: absolute;
   transform: translateX(-150px);
+  background-color: white;
 }
 
 main .navBar-section {
@@ -113,13 +120,7 @@ main .navBar-section nav li:hover {
   background-color: #ededed;
   font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
 }
-
-footer {
-  position: absolute;
-  bottom: 5px;
-  left: 5px;
-}
-footer span {
-  cursor: pointer;
-  font-size: 50px;
+main .videos-container.active {
+  background-color: rgba(0, 0, 0, 0.466);
+  transform: translate(0);
 }/*# sourceMappingURL=style.css.map */

@@ -39,6 +39,7 @@ header {
             @extend %searchSection-border;
             cursor: pointer;
             &:hover {background-color: lighten($hover-color, 10%);}
+            transition: all 0.5 ease-in-out; 
         }
 
         #mic {
@@ -63,8 +64,6 @@ header {
         @extend %spanStyle;
         img {
             height: 56px;
-            background-color: white;
-            border-radius: 10px;
         }
         span {
             font-size: 30px;
@@ -73,10 +72,13 @@ header {
 
         #menu {
             transition: all 0.5 ease-in-out;
+            z-index: 1;
 
             &.active{
                 position: absolute;
                 transform: translateX(-150px);
+                background-color: $main-color;
+
             }
         }
 
@@ -123,17 +125,15 @@ main {
         }
     }
 
-}
 
-
-
-footer {
-    position: absolute;
-    bottom: 5px;
-    left: 5px;
-
-    span {
-        cursor: pointer;
-        font-size: 50px;
+    .videos-container {
+        @extend %containers;
+        &.active {
+            background-color: rgba(0, 0, 0, 0.466);
+            transform: translate(0);
+        }
     }
+
 }
+
+
