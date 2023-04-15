@@ -52,6 +52,7 @@ header .search-section input {
   width: 500px;
   height: 40px;
   border-radius: 10px 75px 75px 10px;
+  z-index: -10;
 }
 header .search-section #search {
   width: 70px;
@@ -60,6 +61,7 @@ header .search-section #search {
   border-radius: 75px 10px 10px 75px;
   cursor: pointer;
   transition: all 0.5 ease-in-out;
+  z-index: -10;
 }
 header .search-section #search:hover {
   background-color: #ededed;
@@ -101,7 +103,7 @@ main .navBar-section nav {
   top: 0;
   right: 0;
   width: 200px;
-  height: 500px;
+  height: 100%;
   background-color: white;
   padding: 15px;
   transition: all 0.4s ease-in-out;

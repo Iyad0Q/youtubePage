@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTxube - fake page</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="this is a simple project to learn sass and some javaScripts tricks, if you want to see it">
+    <title>YouTube - fake page</title>
+    <link rel="stylesheet" href="style.css"> <!-- connect with stylesheet file -->
 
     <!-- outline icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/> 
@@ -19,18 +20,21 @@
 <body>
     <header>
 
+        <!-- the left section (the notfications button, user icon, and upload a new video) -->
         <div class="user-section">
             <span class="material-symbols-outlined" id="userIcon">account_circle</span>
             <span class="material-symbols-outlined" id="notifications">notifications</span>
             <span class="material-symbols-outlined" id="videoCreation">video_call</span>
         </div>
 
+        <!-- the searchBar section with mic button -->
         <div class="search-section">
             <span class="material-symbols-outlined" id="mic"> mic</span>
             <button class="material-symbols-outlined" id="search">search</button>
             <input type="search" name="" id="searchBar" placeholder="search">
         </div>
 
+        <!-- youtube logo and menu button -->
         <div class="menu-section">
             <span class="material-symbols-outlined" id="menu">menu</span>
             <a href="https://www.youtube.com/" target="_blank">
@@ -41,7 +45,7 @@
     </header>
 
     <main>
-
+        <!-- the navBar section -->
         <div class="navBar-section">
             <nav>
                 <li><span class="material-symbols-outlined">home</span>home</li> 
@@ -54,26 +58,15 @@
             </nav>
         </div>
 
-        <div class="videos-container">
-            <div class="videos">
-                <div id="video1"></div>
-                <div id="video2"></div>
-                <div id="video3"></div>
-                <div id="video4"></div>
-                <div id="video5"></div>
-                <div id="video7"></div>
-                <div id="video8"></div>
-                <div id="video9"></div>
-                <div id="video10"></div>
-            </div>
-        </div>
-
+        <div class=".videos-container"></div>
 
     </main>
 
-    <footer></footer>
+    <footer>
+        <p>this is a simple page to learn sass and some javaScripts tricks 🙃👍 .</p>
+    </footer>
 
-    <script src="main.js"></script>
+    <script src="main.js"></script> <!-- connect with javaScript file -->
     
 </body>
 </html>
